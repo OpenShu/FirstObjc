@@ -8,6 +8,9 @@
 
 #import "XYHideAnimationViewController.h"
 
+/**
+ 属性变化，产生的动画的时间由事务控制，事务的进栈和出栈，决定动画的开始和结束，事务可以设置时间，每个不同动画都对应不同的事务，一个runloop默认事务的进出站时间是0.25
+ */
 @interface XYHideAnimationViewController ()
 @property (nonatomic, strong) CALayer *backColorLayer;
 @end
@@ -24,6 +27,13 @@
 - (void)changeColor:(id)sender {
     [CATransaction begin];
     [CATransaction setAnimationDuration:2.0];
+    __weak XYHideAnimationViewController *weakSelf = self;
+    [CATransaction setCompletionBlock:^{
+        CGAffineTransform transform = weakSelf.backColorLayer.affineTransform;
+        transform = CGAffineTransformRotate(transform, M_PI/2);
+        weakSelf.backColorLayer.affineTransform = transform;
+    }];
+    [CATransaction setDisableActions:YES];
     CGFloat red = arc4random() / (CGFloat)INT_MAX;
     CGFloat green = arc4random() / (CGFloat)INT_MAX;
     CGFloat blue = arc4random() / (CGFloat)INT_MAX;
