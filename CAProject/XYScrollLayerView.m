@@ -9,15 +9,22 @@
 #import "XYScrollLayerView.h"
 
 @implementation XYScrollLayerView
-+ (Class)layerClass {
-    return [CAScrollLayer class];
-}
+//+ (Class)layerClass {
+//    return [CAScrollLayer class];
+//}
 
 - (void)setUp {
     self.layer.masksToBounds = YES;
     UIPanGestureRecognizer *re = nil;
     re = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self addGestureRecognizer:re];
+    [UIView animateWithDuration:5.0 animations:^{
+        self.layer.backgroundColor = [UIColor blueColor].CGColor;
+    }];
+//    [CATransaction begin];
+//    self.layer.backgroundColor = [UIColor blueColor].CGColor;
+//    [CATransaction setAnimationDuration:4.0];
+//    [CATransaction commit];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -30,8 +37,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setUp];
-    
-    
 }
 
 - (void)pan:(UIPanGestureRecognizer *)re {

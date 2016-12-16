@@ -48,7 +48,7 @@
 }
 
 - (void)click {
-     XYHideAnimationViewController *shadow = [[XYHideAnimationViewController alloc] init];
+     XYCAScrollLayerController *shadow = [[XYCAScrollLayerController alloc] init];
     [self.navigationController pushViewController:shadow animated:YES];
 
 }
