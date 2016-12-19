@@ -27,7 +27,7 @@
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionPush;
     transition.subtype = kCATransitionFromLeft;
-    _backColorLayer.actions = @{@"backgroundColor":transition};;
+    _backColorLayer.actions = @{@"backgroundColor":transition};
     [self.containerView.layer addSublayer:_backColorLayer];
     [self testShowLayer];
 }

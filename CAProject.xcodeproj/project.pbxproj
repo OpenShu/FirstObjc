@@ -27,6 +27,10 @@
 		090E5B8D1DF16754004D40EE /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 090E5B781DF16754004D40EE /* UIProgressView+AFNetworking.m */; };
 		090E5B8E1DF16754004D40EE /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 090E5B7A1DF16754004D40EE /* UIRefreshControl+AFNetworking.m */; };
 		090E5B8F1DF16754004D40EE /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 090E5B7C1DF16754004D40EE /* UIWebView+AFNetworking.m */; };
+		094650C91E039EC700C4FE63 /* XYActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094650C71E039EC700C4FE63 /* XYActionViewController.m */; };
+		094650CA1E039EC700C4FE63 /* XYActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094650C81E039EC700C4FE63 /* XYActionViewController.xib */; };
+		094650CE1E03D9F900C4FE63 /* XYShowActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094650CC1E03D9F900C4FE63 /* XYShowActionViewController.m */; };
+		094650CF1E03D9F900C4FE63 /* XYShowActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094650CD1E03D9F900C4FE63 /* XYShowActionViewController.xib */; };
 		095A7DE71DEFFC2B00BAA3CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A7DE61DEFFC2B00BAA3CE /* main.m */; };
 		095A7DEA1DEFFC2B00BAA3CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A7DE91DEFFC2B00BAA3CE /* AppDelegate.m */; };
 		095A7DF21DEFFC2B00BAA3CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095A7DF11DEFFC2B00BAA3CE /* Assets.xcassets */; };
@@ -121,6 +125,12 @@
 		090E5B7A1DF16754004D40EE /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		090E5B7B1DF16754004D40EE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		090E5B7C1DF16754004D40EE /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		094650C61E039EC700C4FE63 /* XYActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYActionViewController.h; sourceTree = "<group>"; };
+		094650C71E039EC700C4FE63 /* XYActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYActionViewController.m; sourceTree = "<group>"; };
+		094650C81E039EC700C4FE63 /* XYActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYActionViewController.xib; sourceTree = "<group>"; };
+		094650CB1E03D9F900C4FE63 /* XYShowActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYShowActionViewController.h; sourceTree = "<group>"; };
+		094650CC1E03D9F900C4FE63 /* XYShowActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYShowActionViewController.m; sourceTree = "<group>"; };
+		094650CD1E03D9F900C4FE63 /* XYShowActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYShowActionViewController.xib; sourceTree = "<group>"; };
 		095A7DE21DEFFC2B00BAA3CE /* CAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095A7DE61DEFFC2B00BAA3CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		095A7DE81DEFFC2B00BAA3CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -411,6 +421,12 @@
 				095A7E2F1DEFFF0100BAA3CE /* XYShadowViewController.h */,
 				095A7E301DEFFF0600BAA3CE /* XYShadowViewController.m */,
 				095A7E321DEFFF0B00BAA3CE /* XYShadowViewController.xib */,
+				094650C61E039EC700C4FE63 /* XYActionViewController.h */,
+				094650C71E039EC700C4FE63 /* XYActionViewController.m */,
+				094650C81E039EC700C4FE63 /* XYActionViewController.xib */,
+				094650CB1E03D9F900C4FE63 /* XYShowActionViewController.h */,
+				094650CC1E03D9F900C4FE63 /* XYShowActionViewController.m */,
+				094650CD1E03D9F900C4FE63 /* XYShowActionViewController.xib */,
 			);
 			name = XYLayerAndCA;
 			sourceTree = "<group>";
@@ -525,10 +541,12 @@
 				095A7DF51DEFFC2B00BAA3CE /* LaunchScreen.storyboard in Resources */,
 				095A7E5C1DEFFFE100BAA3CE /* XYHideAnimationViewController.xib in Resources */,
 				095A7E3D1DEFFF3E00BAA3CE /* XYShapeLayerViewController.xib in Resources */,
+				094650CF1E03D9F900C4FE63 /* XYShowActionViewController.xib in Resources */,
 				095A7E521DEFFFB200BAA3CE /* XYCAScrollLayerController.xib in Resources */,
 				095A7E5E1DF0005B00BAA3CE /* Main.storyboard in Resources */,
 				090E5B861DF16754004D40EE /* LICENSE in Resources */,
 				095A7E331DEFFF0B00BAA3CE /* XYShadowViewController.xib in Resources */,
+				094650CA1E039EC700C4FE63 /* XYActionViewController.xib in Resources */,
 				095A7E571DEFFFD400BAA3CE /* scroller.xib in Resources */,
 				095A7E4A1DEFFF8300BAA3CE /* XYCAGradientLayerViewController.xib in Resources */,
 				095A7E381DEFFF2D00BAA3CE /* XYTransformViewController.xib in Resources */,
@@ -582,6 +600,7 @@
 				090E5B7E1DF16754004D40EE /* AFHTTPRequestOperationManager.m in Sources */,
 				090E5B8F1DF16754004D40EE /* UIWebView+AFNetworking.m in Sources */,
 				095A7E551DEFFFC800BAA3CE /* XYScrollLayerView.m in Sources */,
+				094650C91E039EC700C4FE63 /* XYActionViewController.m in Sources */,
 				090E5B7D1DF16754004D40EE /* AFHTTPRequestOperation.m in Sources */,
 				090E5B851DF16754004D40EE /* AFURLSessionManager.m in Sources */,
 				095A7E451DEFFF6C00BAA3CE /* LayerLabel.m in Sources */,
@@ -592,6 +611,7 @@
 				095A7E511DEFFFB200BAA3CE /* XYCAScrollLayerController.m in Sources */,
 				095A7E311DEFFF0600BAA3CE /* XYShadowViewController.m in Sources */,
 				095A7E491DEFFF8300BAA3CE /* XYCAGradientLayerViewController.m in Sources */,
+				094650CE1E03D9F900C4FE63 /* XYShowActionViewController.m in Sources */,
 				095A7E1E1DEFFDFD00BAA3CE /* XYCommonTabBarController.m in Sources */,
 				095A7E2E1DEFFEEE00BAA3CE /* XYLayerViewController.m in Sources */,
 				0980EF3B1DF674E7000F1D99 /* XYBaseRequest.m in Sources */,

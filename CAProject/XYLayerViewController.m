@@ -15,6 +15,8 @@
 #import "XYCAReplicatorLayerViewController.h"
 #import "XYCAScrollLayerController.h"
 #import "XYHideAnimationViewController.h"
+#import "XYActionViewController.h"
+#import "XYShowActionViewController.h"
 
 @interface XYLayerViewController ()
 
@@ -48,7 +50,7 @@
 }
 
 - (void)click {
-     XYCAScrollLayerController *shadow = [[XYCAScrollLayerController alloc] init];
+     XYShowActionViewController *shadow = [[XYShowActionViewController alloc] init];
     [self.navigationController pushViewController:shadow animated:YES];
 
 }

@@ -8,23 +8,31 @@
 
 #import "XYScrollLayerView.h"
 
+@interface XYScrollLayerView ()
+@property (nonatomic,strong) CALayer *backLayer;
+@end
+
 @implementation XYScrollLayerView
 //+ (Class)layerClass {
 //    return [CAScrollLayer class];
 //}
 
 - (void)setUp {
-    self.layer.masksToBounds = YES;
-    UIPanGestureRecognizer *re = nil;
-    re = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
-    [self addGestureRecognizer:re];
-    [UIView animateWithDuration:5.0 animations:^{
-        self.layer.backgroundColor = [UIColor blueColor].CGColor;
-    }];
-//    [CATransaction begin];
-//    self.layer.backgroundColor = [UIColor blueColor].CGColor;
-//    [CATransaction setAnimationDuration:4.0];
-//    [CATransaction commit];
+//    UIView *backView = [[UIView alloc] initWithFrame:self.bounds];
+//    [self addSubview:backView];
+    self.backLayer = [CALayer layer];
+    _backLayer.frame = self.bounds;
+    _backLayer.backgroundColor = [UIColor blueColor].CGColor;
+    [self.layer addSublayer:_backLayer];
+    
+    
+    [UIView beginAnimations:nil context:nil];
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:5.0];
+    _backLayer.backgroundColor = [UIColor yellowColor].CGColor;
+    NSLog(@"%@...",[self actionForLayer:self.backLayer forKey:@"backgroundColor"]);
+    [CATransaction commit];
+    [UIView commitAnimations];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {

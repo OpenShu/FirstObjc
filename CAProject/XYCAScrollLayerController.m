@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.scrollLayerView.frame = CGRectMake(100, 100, 100, 100);
+    self.scrollLayerView.frame = CGRectMake(100,100, 100, 100);
     [self.view addSubview:self.scrollLayerView];
     
 }
