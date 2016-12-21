@@ -14,6 +14,7 @@
 
 @interface XYShowActionViewController ()<CAAnimationDelegate>
 @property (nonatomic, strong) CALayer *colorLayer;
+@property (nonatomic, copy) NSArray *images;
 @end
 
 @implementation XYShowActionViewController
@@ -27,7 +28,8 @@
   //  [self.layerView.layer addSublayer:self.colorLayer];
    // [self createBePath];
    // [self createTransForm];
-    [self createGroupAnimation];
+  //  [self createGroupAnimation];
+    [self createTransitionAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -152,6 +154,22 @@
     [colorLayer addAnimation:groupAnimation forKey:nil];
 }
 
+// transition 动画
+- (void)createTransitionAnimation {
+    self.images = @[[UIImage imageNamed:@"上"],[UIImage imageNamed:@"中"],[UIImage imageNamed:@"下"]];
+    
+}
 
 
+
+- (IBAction)imageBtn:(id)sender {
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    [self.AnimationImageView.layer addAnimation:transition forKey:nil];
+    UIImage *cImage = self.AnimationImageView.image;
+    NSUInteger index = [self.images indexOfObject:cImage];
+    index = (index + 1) % [_images count];
+    self.AnimationImageView.image = self.images[index];
+    
+}
 @end

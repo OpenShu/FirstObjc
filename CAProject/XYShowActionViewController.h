@@ -11,5 +11,7 @@
 @interface XYShowActionViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *layerView;
 - (IBAction)clickBTn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *AnimationImageView;
+- (IBAction)imageBtn:(id)sender;
 
 @end

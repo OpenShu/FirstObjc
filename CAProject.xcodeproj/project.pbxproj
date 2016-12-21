@@ -62,6 +62,7 @@
 		095A7E5B1DEFFFE100BAA3CE /* XYHideAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A7E591DEFFFE100BAA3CE /* XYHideAnimationViewController.m */; };
 		095A7E5C1DEFFFE100BAA3CE /* XYHideAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095A7E5A1DEFFFE100BAA3CE /* XYHideAnimationViewController.xib */; };
 		095A7E5E1DF0005B00BAA3CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095A7E5D1DF0005B00BAA3CE /* Main.storyboard */; };
+		09772C481E0923CD00F5C6EC /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09772C471E0923CD00F5C6EC /* YTKBatchRequest.m */; };
 		0980EF381DF6738B000F1D99 /* XYNetWorkingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0980EF371DF6738B000F1D99 /* XYNetWorkingConfig.m */; };
 		0980EF3B1DF674E7000F1D99 /* XYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0980EF3A1DF674E7000F1D99 /* XYBaseRequest.m */; };
 /* End PBXBuildFile section */
@@ -185,6 +186,8 @@
 		095A7E591DEFFFE100BAA3CE /* XYHideAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHideAnimationViewController.m; sourceTree = "<group>"; };
 		095A7E5A1DEFFFE100BAA3CE /* XYHideAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYHideAnimationViewController.xib; sourceTree = "<group>"; };
 		095A7E5D1DF0005B00BAA3CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		09772C461E0923CD00F5C6EC /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
+		09772C471E0923CD00F5C6EC /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
 		0980EF361DF6738B000F1D99 /* XYNetWorkingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNetWorkingConfig.h; sourceTree = "<group>"; };
 		0980EF371DF6738B000F1D99 /* XYNetWorkingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNetWorkingConfig.m; sourceTree = "<group>"; };
 		0980EF391DF674E7000F1D99 /* XYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBaseRequest.h; sourceTree = "<group>"; };
@@ -375,15 +378,8 @@
 		095A7E271DEFFE7200BAA3CE /* XYNetWork */ = {
 			isa = PBXGroup;
 			children = (
+				09772C491E0923D500F5C6EC /* YTK */,
 				090E5B531DF16754004D40EE /* AFNetworking */,
-				095A7E291DEFFE8D00BAA3CE /* XYNetWorkViewController.m */,
-				095A7E281DEFFE8700BAA3CE /* XYNetWorkViewController.h */,
-				090E5B501DF1612D004D40EE /* XYNetWorkAgent.h */,
-				090E5B511DF1612D004D40EE /* XYNetWorkAgent.m */,
-				0980EF361DF6738B000F1D99 /* XYNetWorkingConfig.h */,
-				0980EF371DF6738B000F1D99 /* XYNetWorkingConfig.m */,
-				0980EF391DF674E7000F1D99 /* XYBaseRequest.h */,
-				0980EF3A1DF674E7000F1D99 /* XYBaseRequest.m */,
 			);
 			name = XYNetWork;
 			sourceTree = "<group>";
@@ -429,6 +425,23 @@
 				094650CD1E03D9F900C4FE63 /* XYShowActionViewController.xib */,
 			);
 			name = XYLayerAndCA;
+			sourceTree = "<group>";
+		};
+		09772C491E0923D500F5C6EC /* YTK */ = {
+			isa = PBXGroup;
+			children = (
+				095A7E291DEFFE8D00BAA3CE /* XYNetWorkViewController.m */,
+				095A7E281DEFFE8700BAA3CE /* XYNetWorkViewController.h */,
+				090E5B501DF1612D004D40EE /* XYNetWorkAgent.h */,
+				090E5B511DF1612D004D40EE /* XYNetWorkAgent.m */,
+				0980EF361DF6738B000F1D99 /* XYNetWorkingConfig.h */,
+				0980EF371DF6738B000F1D99 /* XYNetWorkingConfig.m */,
+				0980EF391DF674E7000F1D99 /* XYBaseRequest.h */,
+				0980EF3A1DF674E7000F1D99 /* XYBaseRequest.m */,
+				09772C461E0923CD00F5C6EC /* YTKBatchRequest.h */,
+				09772C471E0923CD00F5C6EC /* YTKBatchRequest.m */,
+			);
+			name = YTK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -588,6 +601,7 @@
 				095A7DE71DEFFC2B00BAA3CE /* main.m in Sources */,
 				090E5B7F1DF16754004D40EE /* AFHTTPSessionManager.m in Sources */,
 				095A7E221DEFFE3100BAA3CE /* XYThirdViewController.m in Sources */,
+				09772C481E0923CD00F5C6EC /* YTKBatchRequest.m in Sources */,
 				095A7E5B1DEFFFE100BAA3CE /* XYHideAnimationViewController.m in Sources */,
 				090E5B8E1DF16754004D40EE /* UIRefreshControl+AFNetworking.m in Sources */,
 				090E5B8D1DF16754004D40EE /* UIProgressView+AFNetworking.m in Sources */,
