@@ -105,7 +105,7 @@ typedef void (^AFURLSessionTaskProgressBlock)(NSProgress *);
 //
 @property (nonatomic, strong,readonly,nullable) NSString *reponseString;
 //
-@property (nonatomic, strong,readonly,nullable) id responseObject;
+@property (nonatomic, strong,nullable) id responseObject;
 //
 @property (nonatomic, strong,readonly,nullable) id responseJSONObject;
 //

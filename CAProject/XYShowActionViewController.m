@@ -25,11 +25,12 @@
     self.colorLayer = [CALayer layer];
     self.colorLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
     self.colorLayer.backgroundColor = [UIColor blueColor].CGColor;
+    [self.layerView.layer addSublayer:self.colorLayer];
   //  [self.layerView.layer addSublayer:self.colorLayer];
    // [self createBePath];
    // [self createTransForm];
   //  [self createGroupAnimation];
-    [self createTransitionAnimation];
+   // [self createTransitionAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +73,11 @@
                          (__bridge id)[UIColor greenColor].CGColor,
                          (__bridge id)[UIColor blueColor].CGColor
                         ];
+    // 是动画更加平滑 (缓冲)
+    CAMediaTimingFunction *fn = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    animation.timingFunctions  = @[fn,fn,fn];
+    animation.repeatDuration = INFINITY;
+    animation.autoreverses = YES;
     [self.colorLayer addAnimation:animation forKey:nil];
 }
 

@@ -5,6 +5,9 @@
 //  Created by shubochao on 2016/11/14.
 //  Copyright © 2016年 shubochao. All rights reserved.
 //
+/**
+ 第一个页面跳转
+ */
 
 #import "XYLayerViewController.h"
 #import "XYShadowViewController.h"
@@ -17,6 +20,8 @@
 #import "XYHideAnimationViewController.h"
 #import "XYActionViewController.h"
 #import "XYShowActionViewController.h"
+#import "XYCATimeViewController.h"
+#import "XYMediaTimingViewController.h"
 
 @interface XYLayerViewController ()
 
@@ -50,7 +55,7 @@
 }
 
 - (void)click {
-     XYShowActionViewController *shadow = [[XYShowActionViewController alloc] init];
+     XYMediaTimingViewController *shadow = [[XYMediaTimingViewController alloc] init];
     [self.navigationController pushViewController:shadow animated:YES];
 
 }

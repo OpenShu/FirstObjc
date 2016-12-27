@@ -13,8 +13,8 @@
 #import "XYNetWorkViewController.h"
 #import "XYCommonTabBarController.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate ()<UITabBarControllerDelegate>
+@property (nonatomic, strong) XYCommonTabBarController *tab;
 @end
 
 @implementation AppDelegate
@@ -25,8 +25,9 @@
     [self.window makeKeyAndVisible];
     
     
-    XYCommonTabBarController *tab = [[XYCommonTabBarController alloc] init];
-    self.window.rootViewController = tab;
+    self.tab = [[XYCommonTabBarController alloc] init];
+//    _tab.delegate = self;
+    self.window.rootViewController = _tab;
     
     XYLayerViewController *layerViewController = [[XYLayerViewController alloc] init];
     XYDataViewController *dataViewController = [[XYDataViewController alloc] init];
@@ -37,7 +38,7 @@
     XYCommonNavigationController *dataNav = [[XYCommonNavigationController alloc] initWithRootViewController:dataViewController];
     XYCommonNavigationController *netNav = [[XYCommonNavigationController alloc] initWithRootViewController:netWorkViewController];
     XYCommonNavigationController *viewLayerNav = [[XYCommonNavigationController alloc] initWithRootViewController:layerViewController];
-    tab.viewControllers = @[viewLayerNav,netNav,dataNav,thirdNav];
+    _tab.viewControllers = @[viewLayerNav,netNav,dataNav,thirdNav];
 
     return YES;
 }
@@ -49,6 +50,13 @@
     
 }
 
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    CATransition *transtion = [CATransition animation];
+    transtion.type = kCATransitionPush;
+    transtion.subtype = kCATransitionFromLeft;
+    [self.tab.view.layer addAnimation:transtion forKey:nil];
+}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
