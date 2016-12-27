@@ -10,5 +10,6 @@
 
 @interface XYMediaTimingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *layerView;
+@property (weak, nonatomic) IBOutlet UIView *layerView1;
 
 @end
